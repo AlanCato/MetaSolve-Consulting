@@ -24,7 +24,6 @@ export default function Header() {
   const navLinks = (
     <>
       <NavLink href="/#services">Services</NavLink>
-      <NavLink href="/appeal-assessment">AI Appeal Assessment</NavLink>
       <NavLink href="/#contact">Contact</NavLink>
     </>
   );
