@@ -7,13 +7,13 @@ export default function Hero() {
     <section className="container py-20 md:py-32">
       <div className="mx-auto max-w-4xl text-center">
         <h1 className="font-headline text-4xl font-bold tracking-tight text-primary sm:text-5xl lg:text-6xl">
-          Your Instagram Account, <span className="text-foreground">Reclaimed and Secured.</span>
+          Your Meta Accounts, <span className="text-foreground">Reclaimed and Secured.</span>
         </h1>
         <p className="mt-6 text-lg leading-8 text-muted-foreground">
-          At InstaSolve, we specialize in resolving complex Instagram account issues with expertise and complete privacy. From account recovery to securing rare usernames, we provide tailored solutions to get you back on track.
+          At MetaSolve, we specialize in resolving complex issues across Facebook, Instagram, and WhatsApp with expertise and complete privacy. From account recovery to securing rare usernames, we provide tailored solutions to get you back on track.
         </p>
         <div className="mt-10 flex items-center justify-center gap-x-6">
-          <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
             <Link href="/#services">
               Explore Our Services
               <ArrowRight className="ml-2 h-5 w-5" />

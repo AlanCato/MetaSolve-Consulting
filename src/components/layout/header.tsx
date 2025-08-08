@@ -4,7 +4,7 @@ import * as React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Instagram } from 'lucide-react';
+import { Menu, Facebook, Instagram, MessageCircle } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 export default function Header() {
@@ -32,8 +32,12 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Instagram className="h-6 w-6 text-primary" />
-          <span className="font-bold font-headline text-lg">InstaSolve Consulting</span>
+          <div className="flex items-center gap-2">
+            <Facebook className="h-6 w-6 text-primary" />
+            <Instagram className="h-6 w-6 text-primary" />
+            <MessageCircle className="h-6 w-6 text-primary" />
+          </div>
+          <span className="font-bold font-headline text-lg">MetaSolve Consulting</span>
         </Link>
         <div className="flex flex-1 items-center justify-end space-x-6">
           {isMobile ? (

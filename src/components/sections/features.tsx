@@ -3,12 +3,12 @@ import { ShieldCheck, BrainCircuit, BarChart } from 'lucide-react';
 const features = [
   {
     name: 'Total Privacy',
-    description: 'Your case is handled with the utmost confidentiality. We never share your information and operate with complete discretion.',
+    description: 'Your case is handled with the utmost confidentiality. We never share your information and operate with complete discretion across all Meta platforms.',
     icon: ShieldCheck,
   },
   {
     name: 'Unmatched Expertise',
-    description: 'Our team possesses deep, specialized knowledge of Instagram’s policies and internal workings to navigate complex issues effectively.',
+    description: 'Our team possesses deep, specialized knowledge of Meta’s policies and internal workings to navigate complex issues effectively.',
     icon: BrainCircuit,
   },
   {
@@ -23,9 +23,9 @@ export default function Features() {
     <section id="features" className="py-24 sm:py-32">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-accent">Why Choose Us?</h2>
+          <h2 className="text-base font-semibold leading-7 text-primary">Why Choose Us?</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">
-            The InstaSolve Advantage
+            The MetaSolve Advantage
           </p>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
             We provide more than just solutions; we offer peace of mind. Our process is built on a foundation of trust, expertise, and a commitment to your success.

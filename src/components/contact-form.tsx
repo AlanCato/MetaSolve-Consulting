@@ -15,7 +15,7 @@ import React from 'react';
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
   email: z.string().email({ message: 'Please enter a valid email.' }),
-  instagramUsername: z.string().min(1, { message: 'Instagram username is required.' }),
+  platformUsername: z.string().min(1, { message: 'Username/ID is required.' }),
   issueType: z.string({ required_error: 'Please select an issue type.' }),
   message: z.string().min(10, { message: 'Message must be at least 10 characters.' }).max(500, { message: 'Message must not exceed 500 characters.' }),
 });
@@ -38,7 +38,7 @@ export default function ContactForm() {
     defaultValues: {
       name: '',
       email: '',
-      instagramUsername: '',
+      platformUsername: '',
       message: '',
     },
   });
@@ -89,12 +89,12 @@ export default function ContactForm() {
         </div>
         <FormField
           control={form.control}
-          name="instagramUsername"
+          name="platformUsername"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Instagram Username</FormLabel>
+              <FormLabel>Platform Username / ID</FormLabel>
               <FormControl>
-                <Input placeholder="@username" {...field} />
+                <Input placeholder="e.g., @username or profile ID" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -135,7 +135,7 @@ export default function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground" size="lg" disabled={isSubmitting}>
+        <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground" size="lg" disabled={isSubmitting}>
             {isSubmitting ? (
                 <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />

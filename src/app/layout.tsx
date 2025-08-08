@@ -3,8 +3,8 @@ import { Toaster } from "@/components/ui/toaster"
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'InstaSolve Consulting',
-  description: 'Expert consulting for your Instagram account needs.',
+  title: 'MetaSolve Consulting',
+  description: 'Expert consulting for your Meta platform account needs.',
 };
 
 export default function RootLayout({
