@@ -23,7 +23,8 @@ export default function Header() {
 
   const navLinks = (
     <>
-      <NavLink href="/#services">Services</NavLink>
+      <NavLink href="/services">Services</NavLink>
+      <NavLink href="/#faq">FAQ</NavLink>
       <NavLink href="/#contact">Contact</NavLink>
     </>
   );

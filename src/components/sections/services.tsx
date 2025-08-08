@@ -1,50 +1,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle, EyeOff, Copyright, Users, BadgeCheck, AtSign, Ghost, Facebook, Instagram, MessageCircle } from 'lucide-react';
-
-const services = [
-  {
-    title: 'Account Unbanning',
-    icon: <CheckCircle className="h-8 w-8 text-primary" />,
-    description: "Regain access to your account. We handle appeals for various violations on Facebook, Instagram & WhatsApp.",
-    causes: [
-      { name: 'Nudity & Community Guidelines', icon: <EyeOff className="h-5 w-5 text-muted-foreground" /> },
-      { name: 'Copyright Infringement', icon: <Copyright className="h-5 w-5 text-muted-foreground" /> },
-      { name: 'Impersonation Claims', icon: <Users className="h-5 w-5 text-muted-foreground" /> },
-    ],
-  },
-  {
-    title: 'Legacy Verification',
-    icon: <BadgeCheck className="h-8 w-8 text-primary" />,
-    description: 'Get the blue tick on Instagram & Facebook. Our private consultation guides you through the legacy verification process.',
-    causes: [
-      { name: 'Meeting hidden criteria', icon: <Users className="h-5 w-5 text-muted-foreground" /> },
-      { name: 'Insider submission channels', icon: <EyeOff className="h-5 w-5 text-muted-foreground" /> },
-      { name: 'Disclaimer: Results vary', icon: <Copyright className="h-5 w-5 text-muted-foreground" /> },
-    ],
-  },
-  {
-    title: 'Rare Username Acquisition',
-    icon: <AtSign className="h-8 w-8 text-primary" />,
-    description: 'Secure a short, unique, or high-value username for Instagram or Facebook. We consult on acquiring inactive names.',
-    causes: [
-        { name: 'Inactive account claims', icon: <Users className="h-5 w-5 text-muted-foreground" /> },
-        { name: 'Trademark negotiations', icon: <Copyright className="h-5 w-5 text-muted-foreground" /> },
-        { name: 'Private acquisitions', icon: <EyeOff className="h-5 w-5 text-muted-foreground" /> },
-    ],
-  },
-  {
-    title: 'Shadowban & Content Appeal',
-    icon: <Ghost className="h-8 w-8 text-primary" />,
-    description: 'Restore your reach on Instagram & Facebook. We identify and help resolve shadowbans and content restrictions.',
-    causes: [
-      { name: 'Spammy or repetitive behavior', icon: <Users className="h-5 w-5 text-muted-foreground" /> },
-      { name: 'Use of banned hashtags', icon: <EyeOff className="h-5 w-5 text-muted-foreground" /> },
-      { name: 'Flagged content reports', icon: <Copyright className="h-5 w-5 text-muted-foreground" /> },
-    ],
-  },
-];
+import { services } from '@/lib/services';
 
 export default function Services() {
   return (
@@ -58,7 +15,7 @@ export default function Services() {
         </p>
       </div>
       <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
-        {services.map((service) => (
+        {services.slice(0, 2).map((service) => (
           <Card key={service.title} className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300">
             <CardHeader className="flex flex-row items-start gap-4 space-y-0">
                 <div className="flex-shrink-0">{service.icon}</div>
@@ -80,11 +37,16 @@ export default function Services() {
             </CardContent>
             <CardFooter>
               <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                <Link href="/#contact">Contact for Solution</Link>
+                <Link href={`/services/${service.slug}`}>Learn More</Link>
               </Button>
             </CardFooter>
           </Card>
         ))}
+      </div>
+       <div className="mt-12 text-center">
+        <Button asChild size="lg">
+          <Link href="/services">View All Services</Link>
+        </Button>
       </div>
     </section>
   );
